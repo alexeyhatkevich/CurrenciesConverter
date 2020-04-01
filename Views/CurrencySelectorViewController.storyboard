@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Title-->
+        <scene sceneID="mE0-zO-Atx">
+            <objects>
+                <viewController storyboardIdentifier="CurrencySelectorViewController" id="FNM-mg-v2V" customClass="CurrencySelectorViewController" customModule="CurrenciesConverter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ecE-Ab-nqp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qmw-oX-1E9">
+                                <rect key="frame" x="0.0" y="193.5" width="375" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="FNM-mg-v2V" id="fgG-3Q-ihp"/>
+                                    <outlet property="delegate" destination="FNM-mg-v2V" id="dYc-qJ-gdQ"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Qmw-oX-1E9" firstAttribute="width" secondItem="ecE-Ab-nqp" secondAttribute="width" id="I6r-CD-keB"/>
+                            <constraint firstItem="Qmw-oX-1E9" firstAttribute="centerX" secondItem="Ve9-0q-8u0" secondAttribute="centerX" id="RD9-16-bPf"/>
+                            <constraint firstItem="Qmw-oX-1E9" firstAttribute="centerY" secondItem="Ve9-0q-8u0" secondAttribute="centerY" id="e0c-MI-v75"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ve9-0q-8u0"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="9hP-gc-QC4">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="Amb-fl-Oll">
+                            <connections>
+                                <action selector="save" destination="FNM-mg-v2V" id="ag5-oy-W2t"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="picker" destination="Qmw-oX-1E9" id="Nka-5e-clS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="alx-Qj-poL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="359" y="214"/>
+        </scene>
+    </scenes>
+</document>
